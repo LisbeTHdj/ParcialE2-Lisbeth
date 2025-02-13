@@ -1,0 +1,26 @@
+name: Deploy to Surge
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Surge
+        run: |
+          npm install --global surge
+
+      - name: Deploy to Surge
+        env:
+          SURGE_TOKEN: 87060fef2cb5787acf4dd5c028d54dcc  
+        run: |
+          surge ./dist --domain Lisbeth-De-Jesus-G-2023-0287.surge.sh
+
+
