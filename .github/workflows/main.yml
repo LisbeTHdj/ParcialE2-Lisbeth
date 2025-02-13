@@ -21,6 +21,7 @@ jobs:
         env:
           SURGE_TOKEN: 87060fef2cb5787acf4dd5c028d54dcc  
         run: |
-          surge ./dist --domain Lisbeth-De-Jesus-G-2023-0287.surge.sh
+          surge ./ --domain Lisbeth-De-Jesus-G-2023-0287.surge.sh
+
 
 
